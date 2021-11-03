@@ -1,0 +1,1 @@
+import MiniArticle from './MiniArticle';
