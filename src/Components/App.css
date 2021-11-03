@@ -27,3 +27,13 @@
     transform: rotate(360deg);
   }
 }
+
+/* Content stylings */
+.content {
+  margin: 0 1.5%;
+
+  display: flex;
+  flex-flow: row wrap;
+  align-items: stretch;
+  justify-content: center;
+}

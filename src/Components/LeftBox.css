@@ -8,11 +8,13 @@
     display: flex;
     flex-flow: column wrap;
     align-items: center;
+
+    width: 25%;
   }
 
     .paragraph {
         margin: 2px;
-        width: 60%;
+        width: 90%;
         text-align: center;
     }
 

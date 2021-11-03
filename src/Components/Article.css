@@ -1,0 +1,23 @@
+.article {
+    border: 2px solid rgb(33, 33, 33);
+    box-shadow: 0px 1px 6px -2px rgb(128, 127, 127);
+    border-radius: 8px;
+    margin: 20px;
+    padding: 10px;
+
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+
+    width: 60%;
+  }
+
+  .left-container {
+    border: 2px solid rgb(33, 33, 33);
+    box-shadow: 0px 1px 6px -2px rgb(128, 127, 127);
+    border-radius: 8px;
+    margin: 20px;
+    padding: 10px;
+    width: 60%;
+    align-items: stretch;
+  }
