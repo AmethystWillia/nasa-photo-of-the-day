@@ -15,21 +15,24 @@ import Article from './Article';
 function App() {
   // Setting state for NASA pics
   const [nasaPic, setNasaPic] = useState(null);
+  const [nasaAlt, setNasaAlt] = useState(null);
 
   // Calling API
   useEffect(() => {
     axios.get(`${BASE_URL}?api_key=${API_KEY}`)
       .then(res => {
-        setNasaPic(res.data.hdurl)
+        setNasaPic(res.data.hdurl);
+        setNasaAlt(res.data.title);
       })
       .catch(err => {
-        console.error(`You fucked up! ${err}`);
+        console.error(`You hecked up! ${err}`);
       })
   }, []);
 
   return (
     <div className="App">
       <Header />
+      <LeftBox nasaPic={nasaPic} nasaAlt={nasaAlt} />
       <p>
         Read through the instructions in the README.md file to build your NASA
         app! Have fun <span role="img" aria-label='go!'>🚀</span>!

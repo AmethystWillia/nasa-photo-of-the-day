@@ -4,12 +4,12 @@ import React, { useState, useEffect } from 'react';
 // Import CSS
 import './Header.css';
 
-// Making a rough outline of the header
+// Export header
 export default function Header() {
     // Set states for date and time
     const [date, setDate] = useState('');
     const [time, setTime] = useState('');
-
+    // This is necessary for date/time based on what Google told me
     let today = new Date();
     
     // Set date and time
@@ -19,6 +19,7 @@ export default function Header() {
         setTime(`${today.getHours()}:${today.getMinutes()}`);
     }, [])
 
+    // Header JSX
     return (
         <div className='header'>
             <div className='date'>
