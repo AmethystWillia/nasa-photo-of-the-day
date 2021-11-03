@@ -6,7 +6,7 @@ import { BASE_URL, API_KEY } from '../Constants/index';
 //Importing css
 import "./App.css";
 
-// Importing modules
+// Importing children
 import Header from './Header';
 import LeftBox from './LeftBox';
 import Article from './Article';
@@ -33,6 +33,7 @@ function App() {
     <div className="App">
       <Header />
       <LeftBox nasaPic={nasaPic} nasaAlt={nasaAlt} />
+      <Article />
       <p>
         Read through the instructions in the README.md file to build your NASA
         app! Have fun <span role="img" aria-label='go!'>🚀</span>!
