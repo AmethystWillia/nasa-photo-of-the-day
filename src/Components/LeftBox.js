@@ -27,6 +27,9 @@ const StyledLeftBox = styled.div`
         margin: 2%;
     }
 
+    .bold {
+        font-weight: bold;
+    }
     .italic {
         font-style: italic;
     }
@@ -36,25 +39,25 @@ const StyledLeftBox = styled.div`
 // Export LeftBox
 export default function LeftBox(props) {
     // Declaring consts through props
-    const { nasaData } = props;
+    const {nasaPic, nasaTitle, nasaDate, nasaCR, nasaExp} = props;
 
     // Left Box JSX
     return (
         <StyledLeftBox className='left-box'>
             <div className='image-container'>
-                {nasaData === null ? <p>Loading image...</p> :
-                <img src={props.hdurl} width='85%' />}
+                {nasaPic === null ? <p>Loading image...</p> :
+                <img src={nasaPic} width='75%' alt={nasaTitle}/>}
             </div>
             <div className='title'>
-                {/* <h2>"{nasaData.title}"</h2> */}
+                <h2>{nasaTitle}</h2>
             </div>
             <div className='paragraph'>
                 <p>
-                {/* This image is under the copyright of {nasaData.copyright}. */}
-                <br />
-                {/* This is the image for the data {nasaData.date}. */}
-                <br />
-                {/* This image depicts: <span className='italic'>{nasaData.explanation}</span> */}
+                    <span className='bold'>Date: {nasaDate}</span>
+                    <br />
+                    {nasaExp}
+                    <br />
+                    <span className='italic'>Copyright {nasaCR}</span>
                 </p>
             </div>
             <div className='button'>

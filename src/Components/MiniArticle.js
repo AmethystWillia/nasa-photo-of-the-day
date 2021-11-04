@@ -1,5 +1,5 @@
 // Importing data
-import React, { useSate, useEffect } from 'react';
+import React from 'react';
 
 // Import styles
 import styled from 'styled-components';

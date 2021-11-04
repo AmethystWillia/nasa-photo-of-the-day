@@ -47,17 +47,21 @@ const StyledContent = styled.div`
 
 function App() {
   // Setting state for NASA pics
-  // const [nasaPic, setNasaPic] = useState(null);
-  // const [nasaAlt, setNasaAlt] = useState(null);
-  const [nasaData, setNasaData] = useState(null);
+  const [nasaPic, setNasaPic] = useState(null);
+  const [nasaTitle, setNasaTitle] = useState(null);
+  const [nasaExp, setNasaExp] = useState(null);
+  const [nasaDate, setNasaDate] = useState(null);
+  const [nasaCR, setNasaCR] = useState(null);
 
   // Calling API
   useEffect(() => {
     axios.get(`${BASE_URL}?api_key=${API_KEY}`)
       .then(res => {
-        // setNasaPic(res.data.hdurl);
-        // setNasaAlt(res.data.title);
-        setNasaData(res.data);
+        setNasaPic(res.data.hdurl);
+        setNasaTitle(res.data.title);
+        setNasaExp(res.data.explanation);
+        setNasaDate(res.data.date);
+        setNasaCR(res.data.copyright);
       })
       .catch(err => {
         console.error(`You hecked up! ${err}`);
@@ -70,9 +74,7 @@ function App() {
         <Header />
       </header>
       <StyledContent className='content'>
-        {nasaData.map(info => {
-          return <LeftBox nasaData={info} title={info.title} hdurl={info.hdurl} explanation={info.explanation} date={info.date} />
-        })}
+        <LeftBox nasaPic={nasaPic} nasaTitle={nasaTitle} nasaExp={nasaExp} nasaCR={nasaCR} nasaDate={nasaDate} />
         <Article />
       </StyledContent>
     </div>
