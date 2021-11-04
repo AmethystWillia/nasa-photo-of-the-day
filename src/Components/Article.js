@@ -17,7 +17,8 @@ const StyledArticle = styled.div`
     padding: 1%;
     display: flex;
     flex-flow: row wrap;
-    align-items: center;
+    align-items: flex-start;
+    justify-content: center;
     width: 65%;
 
     .left-container {
