@@ -1,7 +1,25 @@
 import React from "react";
 
-//Importing css
-import "./LeftBox.css";
+//Importing styles
+import styled from 'styled-components'
+
+
+// Styling component
+const StyledLeftBox = styled.div`
+    border: 2px solid rgb(33, 33, 33);
+    box-shadow: 0px 1px 6px -2px rgb(128, 127, 127);
+    border-radius: 8px;
+    margin: 20px;
+    padding: 10px;
+    text-align: center;
+
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+
+    width: 25%;
+`;
+
 
 // Export LeftBox
 export default function LeftBox(props) {
@@ -10,7 +28,7 @@ export default function LeftBox(props) {
 
     // Left Box JSX
     return (
-        <div className='left-box'>
+        <StyledLeftBox className='left-box'>
             <div className='image-container'>
                 {nasaPic === null ? <p>Loading image...</p> :
                 <img src={nasaPic} width='75%' alt={nasaAlt}/>}
@@ -26,6 +44,6 @@ export default function LeftBox(props) {
             <div className='button'>
                 <button>Placeholder</button>
             </div>
-        </div>
+        </StyledLeftBox>
     );
 };

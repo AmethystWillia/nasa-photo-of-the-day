@@ -1,8 +1,34 @@
 // Importing data
 import React, { useState, useEffect } from 'react';
 
-// Import CSS
-import './Header.css';
+// Import Styles
+import styled from 'styled-components';
+
+
+// Styling component
+const StyledHeader = styled.div`
+    background-color: #282c34;
+    padding: 0px 50px 10px 50px;
+    min-height: 16vh;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-end;
+    justify-content: space-between;
+    color: white;
+
+    h1 {
+        font-size: 5.4rem;
+    }
+
+    h3 {
+        font-size: 2.4rem;
+    }
+
+    .time, .date {
+        text-align: center;
+    }
+`;
+
 
 // Export header
 export default function Header() {
@@ -21,7 +47,7 @@ export default function Header() {
 
     // Header JSX
     return (
-        <div className='header'>
+        <StyledHeader className='header'>
             <div className='date'>
                 <p>Today's Date:</p>
                 <h3>{date}</h3>
@@ -33,6 +59,6 @@ export default function Header() {
                 <p>Rendered Time:</p>
                 <h3>{time}</h3>
             </div>
-        </div>
+        </StyledHeader>
     );
 }
