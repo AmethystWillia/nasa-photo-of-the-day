@@ -17,7 +17,7 @@ import Article from './Article';
 
 // Styling component
 const StyledContent = styled.div`
-  margin: 0 1.5%;
+  margin: 0.5%;
   display: flex;
   flex-flow: row wrap;
   align-items: stretch;

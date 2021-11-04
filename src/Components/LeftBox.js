@@ -9,15 +9,38 @@ const StyledLeftBox = styled.div`
     border: 2px solid rgb(33, 33, 33);
     box-shadow: 0px 1px 6px -2px rgb(128, 127, 127);
     border-radius: 8px;
-    margin: 20px;
-    padding: 10px;
+    margin: 1%;
+    padding: 1%;
     text-align: center;
-
     display: flex;
     flex-flow: column wrap;
     align-items: center;
-
     width: 25%;
+
+    h2 {
+        font-size: 3rem;
+    }
+
+    .paragraph {
+        margin: 2px;
+        width: 90%;
+        text-align: center;
+    }
+
+    button {
+        background-color: #282c34;
+        border-radius: 8px;
+        color: white;
+        padding: 10px 24px;
+        text-align: center;
+        text-decoration: none;
+        font-size: 24px;
+    }
+
+    .button {
+        margin: 15px;
+        border: none;
+    }
 `;
 
 
