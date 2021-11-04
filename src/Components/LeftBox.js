@@ -9,7 +9,7 @@ const StyledLeftBox = styled.div`
     border: 2px solid rgb(33, 33, 33);
     box-shadow: 0px 1px 6px -2px rgb(128, 127, 127);
     border-radius: 8px;
-    margin: 1%;
+    margin: 2%;
     padding: 1%;
     text-align: center;
     display: flex;
@@ -34,7 +34,7 @@ const StyledLeftBox = styled.div`
         padding: 10px 24px;
         text-align: center;
         text-decoration: none;
-        font-size: 24px;
+        font-size: 1.8rem;
     }
 
     .button {

@@ -1,11 +1,46 @@
 // Importing data
 import React, { useState } from 'react';
 
-// Import CSS
-import './Article.css';
+// Import styled
+import styled from 'styled-components';
 
 // Importing child
 import MiniArticle from './MiniArticle';
+
+
+// Styling component
+const StyledArticle = styled.div`
+    border: 2px solid rgb(33, 33, 33);
+    box-shadow: 0px 1px 6px -2px rgb(128, 127, 127);
+    border-radius: 8px;
+    margin: 2%;
+    padding: 1%;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    width: 65%;
+
+    .left-container {
+        border: 2px solid rgb(33, 33, 33);
+        box-shadow: 0px 1px 6px -2px rgb(128, 127, 127);
+        border-radius: 8px;
+        margin: 1%;
+        padding: 2%;
+        width: 50%;
+        align-items: stretch;
+      }
+    
+      .right-container {
+        border: 2px solid rgb(33, 33, 33);
+        box-shadow: 0px 1px 6px -2px rgb(128, 127, 127);
+        border-radius: 8px;
+        margin: 1%;
+        padding: 1%;
+        width: 45%;
+        align-items: stretch;
+      }
+`;
+
 
 // Export Article
 export default function Article() {
@@ -19,7 +54,7 @@ export default function Article() {
 
     // Article JSX
     return (
-        <div className='article'>
+        <StyledArticle className='article'>
             <div className='left-container'>
                 <h2>Title</h2>
                 <p>Blizzard Mawile Lumineon Budew Audino Wobbuffet Unfezant. Fire Red Lilligant Combee Swoobat Lombre Gurdurr Calcium. Misty Dark Finneon Johto Lillipup Razor Leaf Purrloin. Pokemon Smeargle Dragonite Scrafty Persian Beldum Dragon Rage. Hoenn Registeel Persian Cobalion Blizzard Nidorina Mineral Badge.
@@ -35,6 +70,6 @@ export default function Article() {
                     {info === true ? <MiniArticle /> : ''}
                 </div>
             </div>
-        </div>
+        </StyledArticle>
     );
 }
